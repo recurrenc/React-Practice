@@ -1,6 +1,6 @@
 .Time {
-  height: 500px;
-  width: 800px;
+  height: fit-content;
+  width: fit-content;
   margin: auto;
   position: absolute;
   top: 0;

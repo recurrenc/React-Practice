@@ -1,10 +1,15 @@
 .App {
   text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 27vh;
 }
 
 .clock {
   background-color: #282c34;
-  min-height: 100vh;
+  border-radius: 50%;
+
+  min-height: 50vh;
   align-items: center;
   justify-content: center;
 }
