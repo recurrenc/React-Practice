@@ -1,0 +1,20 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  font-size: 2rem;
+  background-color: rgb(160, 177, 185);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: rgb(62, 59, 214);
+  flex-direction: column;
+}
+
+.list {
+  padding: 2rem;
+  font-size: 2rem;
+  display: flex;
+  color: rgb(42, 26, 58);
+  justify-content: center;
+  flex-direction: column;
+}

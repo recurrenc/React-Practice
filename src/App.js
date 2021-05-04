@@ -1,13 +1,11 @@
 import "./App.css";
-import Clock from "./components/DigitalClock/Clock";
+import List from "./components/practiceSession1/List";
 
 function App() {
   return (
-    <div className="App">
-      <div className="clock">
-        <Clock />
-      </div>
-    </div>
+    <>
+      <List />
+    </>
   );
 }
 
