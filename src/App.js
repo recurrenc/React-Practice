@@ -1,10 +1,10 @@
 import "./App.css";
-import ShowCurrentTime from "./components/practiceSession2/ShowCurrentTime";
+import DynamicGreeting from "./components/DynamicGreeting/DynamicGreeting";
 
 function App() {
   return (
     <>
-      <ShowCurrentTime />
+      <DynamicGreeting />
     </>
   );
 }
