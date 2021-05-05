@@ -1,10 +1,10 @@
 import "./App.css";
-import List from "./components/practiceSession1/List";
+import ShowCurrentTime from "./components/practiceSession2/ShowCurrentTime";
 
 function App() {
   return (
     <>
-      <List />
+      <ShowCurrentTime />
     </>
   );
 }
