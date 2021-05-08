@@ -10,15 +10,22 @@ const Child = (props) => {
           <img src={props.imgsrc} alt="Thumbnail" />
         </div>
         <div className="info">
-          <div className="title"></div>
-          <div className="director"></div>
-          <div className="runtime"></div>
-          <div className="genre"></div>
-          <div className="stars"></div>
-          <a href={props.link} target="_blank" rel="noopener noreferrer">
-            {" "}
-            Watch Now
-          </a>
+          <div className="title">
+            <h3>{props.title}</h3>
+          </div>
+          <div className="director">
+            <h3>Director: {props.director}</h3>
+          </div>
+          <div className="runtime">
+            <p>Duration: {props.runtime} </p>
+          </div>
+          <div className="genre">
+            <p>Genre: {props.genre} </p>
+          </div>
+          <div className="stars">
+            <p>Stars: {props.stars} </p>
+          </div>
+          <button className="primary">Watch Now</button>
         </div>
       </div>
     </>
