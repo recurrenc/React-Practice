@@ -1,10 +1,10 @@
 import "./App.css";
-import DynamicGreeting from "./components/DynamicGreeting/DynamicGreeting";
+import Card from "./components/TopNetflixSeriese/Card";
 
 function App() {
   return (
     <>
-      <DynamicGreeting />
+      <Card />
     </>
   );
 }

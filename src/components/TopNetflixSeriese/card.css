@@ -1,0 +1,20 @@
+.heading {
+  width: 100vw;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff203;
+  color: #911c6e;
+  font-size: 1.8rem;
+}
+.heading > h1 {
+  padding: 0.8rem;
+  background: transparent;
+  border: 0.5rem solid white;
+  border-radius: 3rem;
+}
+
+.container {
+  background: rgb(150, 99, 99);
+}
