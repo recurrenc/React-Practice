@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@200&display=swap");
+* {
+  font-family: "Heebo", sans-serif;
+}
 .heading {
   width: 100vw;
   height: 8rem;
@@ -38,6 +42,7 @@
 
 .container {
   flex: 45rem;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,9 +50,48 @@
   max-width: 45rem;
   border-radius: 1.5rem;
   margin: 2rem;
-  background: #03ddff;
+  background: rgb(238, 174, 202);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(22, 118, 232, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(22, 118, 232, 1) 100%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(22, 118, 232, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca",endColorstr="#1676e8",GradientType=1);
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.info {
+  margin: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  line-height: 2.5rem;
+}
+.title {
+  font-size: 2rem;
+  position: absolute;
+  top: 1.5rem;
+  letter-spacing: 0.5rem;
+}
+.title h3 {
+  font-style: oblique;
+}
+
+.director h3 {
+  text-align: left;
 }
 
 /* Responsivness management */
@@ -69,5 +113,44 @@
     border: 0.5rem solid white;
     border-radius: 3rem;
     text-align: center;
+  }
+  .img {
+    padding: 0.8rem;
+  }
+  .img > img {
+    width: 16rem;
+    height: 24rem;
+    padding: 1rem;
+    border: 0.2rem solid white;
+    background: rgb(150, 99, 99);
+  }
+  .container {
+    flex: 45rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30rem;
+    max-width: 45rem;
+    border-radius: 1.5rem;
+    margin: 2rem;
+    background: rgb(238, 174, 202);
+    background: -moz-radial-gradient(
+      circle,
+      rgba(238, 174, 202, 1) 0%,
+      rgba(22, 118, 232, 1) 100%
+    );
+    background: -webkit-radial-gradient(
+      circle,
+      rgba(238, 174, 202, 1) 0%,
+      rgba(22, 118, 232, 1) 100%
+    );
+    background: radial-gradient(
+      circle,
+      rgba(238, 174, 202, 1) 0%,
+      rgba(22, 118, 232, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca",endColorstr="#1676e8",GradientType=1);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+      rgba(0, 0, 0, 0.22) 0px 15px 12px;
   }
 }
