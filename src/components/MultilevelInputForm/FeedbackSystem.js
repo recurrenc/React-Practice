@@ -79,7 +79,7 @@ function getStepContent(step) {
   }
 }
 
-export default function ReviewSystem() {
+export default function FeedbackSystem() {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
 

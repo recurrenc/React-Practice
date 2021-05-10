@@ -81,8 +81,7 @@ function Feedback() {
           aria-label="scrollable auto tabs example"
         >
           {TeacherList.map((name, i) => {
-            let key = i;
-            return <Tab label={name} {...a11yProps(key)} />;
+            return <Tab key={i} label={name} {...a11yProps(i)} />;
           })}
         </Tabs>
       </AppBar>
@@ -101,3 +100,4 @@ function Feedback() {
 }
 
 export default Feedback;
+export { TeacherList };

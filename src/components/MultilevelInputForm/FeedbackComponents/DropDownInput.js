@@ -19,6 +19,7 @@ function DropdownInput(props) {
 
   const handleChange = (event) => {
     setLabel(event.target.value);
+    props.onChange(event);
   };
 
   const handleClose = () => {
