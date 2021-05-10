@@ -1,10 +1,11 @@
+import React from "react";
 import "./App.css";
-import Card from "./components/TopNetflixSeriese/Card";
+import Checkout from "./components/MultilevelInputForm/ReviewSystem";
 
 function App() {
   return (
     <>
-      <Card />
+      <Checkout />
     </>
   );
 }
