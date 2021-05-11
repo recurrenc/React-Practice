@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import TextField from "@material-ui/core/TextField";
-import DropdownInput from "../FeedbackComponents/DropDownInput";
-
+import DropDownInput from "../FeedbackComponents/DropDownInput";
 export default function StudentDetails() {
   const [inputValues, setInputValues] = useState({
     firstname: "",
@@ -15,13 +14,11 @@ export default function StudentDetails() {
     email: "",
     mobile: "",
   });
-
   const handleInput = (event) => {
     const { name, value } = event.target;
-    console.log(`${name}   and  ${value}`);
+    console.log(`name:${name}   value: ${value} `);
     setInputValues({ ...inputValues, [name]: value });
   };
-
   return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
@@ -52,13 +49,15 @@ export default function StudentDetails() {
             autoComplete="family-name"
           />
         </Grid>
-        <DropdownInput
-          name="Course"
+        <DropDownInput
+          Name="Course"
+          id="course"
           onChange={handleInput}
           options={["B.Tech", "BCA", "M.Tech", "MCA", "B.Sc", "M.Sc"]}
         />
-        <DropdownInput
-          name="Department"
+        <DropDownInput
+          Name="Department"
+          id="department"
           onChange={handleInput}
           renderValue={inputValues.department}
           options={[
@@ -72,8 +71,9 @@ export default function StudentDetails() {
           ]}
         />
 
-        <DropdownInput
-          name="Semester"
+        <DropDownInput
+          Name="Semester"
+          id="semester"
           onChange={handleInput}
           renderValue={inputValues.semester}
           options={["I", "II", "III", "IV", "V", "VI", "VII", "VIII"]}

@@ -92,7 +92,7 @@ export default function FeedbackSystem() {
   };
 
   return (
-    <React.Fragment>
+    <>
       <CssBaseline />
       <AppBar position="absolute" color="default" className={classes.appBar}>
         <Toolbar>
@@ -113,9 +113,9 @@ export default function FeedbackSystem() {
               </Step>
             ))}
           </Stepper>
-          <React.Fragment>
+          <>
             {activeStep === steps.length ? (
-              <React.Fragment>
+              <>
                 <Typography variant="h5" gutterBottom>
                   Thank you for your feedback.
                 </Typography>
@@ -123,9 +123,9 @@ export default function FeedbackSystem() {
                   Your feedback number is #2001539. We have update your feedback
                   confirmation.
                 </Typography>
-              </React.Fragment>
+              </>
             ) : (
-              <React.Fragment>
+              <>
                 {getStepContent(activeStep)}
                 <div className={classes.buttons}>
                   {activeStep !== 0 && (
@@ -142,12 +142,12 @@ export default function FeedbackSystem() {
                     {activeStep === steps.length - 1 ? "Submit" : "Next"}
                   </Button>
                 </div>
-              </React.Fragment>
+              </>
             )}
-          </React.Fragment>
+          </>
         </Paper>
         <Copyright />
       </main>
-    </React.Fragment>
+    </>
   );
 }

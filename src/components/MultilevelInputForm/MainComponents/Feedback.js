@@ -100,4 +100,3 @@ function Feedback() {
 }
 
 export default Feedback;
-export { TeacherList };
