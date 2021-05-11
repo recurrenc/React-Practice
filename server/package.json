@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Server Created for Feedback System",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Server"
+  ],
+  "author": "Sonu Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
