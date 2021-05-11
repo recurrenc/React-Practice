@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -38,6 +38,7 @@ function a11yProps(index) {
   return {
     id: `scrollable-auto-tab-${index}`,
     "aria-controls": `scrollable-auto-tabpanel-${index}`,
+    name: `teacher${index + 1}`,
   };
 }
 
@@ -63,8 +64,25 @@ const TeacherList = [
 function Feedback() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
+  const [input, setInput] = useState([
+    {
+      teacher: "",
+      question1: "",
+      question2: "",
+      question3: "",
+      question4: "",
+      question5: "",
+      question6: "",
+      question7: "",
+      question8: "",
+      question9: "",
+      question10: "",
+      question11: "",
+    },
+  ]);
 
   const handleChange = (event, newValue) => {
+    console.log(event.target);
     setValue(newValue);
   };
 
@@ -80,8 +98,8 @@ function Feedback() {
           scrollButtons="auto"
           aria-label="scrollable auto tabs example"
         >
-          {TeacherList.map((name, i) => {
-            return <Tab key={i} label={name} {...a11yProps(i)} />;
+          {TeacherList.map((Name, i) => {
+            return <Tab key={i} label={Name} {...a11yProps(i)} />;
           })}
         </Tabs>
       </AppBar>
@@ -90,7 +108,7 @@ function Feedback() {
         return (
           <TabPanel key={i} value={value} index={i}>
             {Question.map((question, j) => {
-              return <DiscreteSlider key={j} question={question} />;
+              return <DiscreteSlider key={j} Key={j} question={question} />;
             })}
           </TabPanel>
         );

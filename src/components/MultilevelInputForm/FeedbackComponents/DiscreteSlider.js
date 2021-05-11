@@ -13,25 +13,32 @@ function valuetext(value) {
   return `${value}`;
 }
 
+function handleOnChange(event, value) {
+  console.log(value);
+  console.log(event);
+}
+
 function DiscreteSlider(props) {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <Typography id="discrete-slider" gutterBottom>
+    <span className={classes.root}>
+      <Typography component={"span"} id="discrete-slider" gutterBottom>
         {props.question}
       </Typography>
       <Slider
         defaultValue={0}
+        name="teacher01"
+        onChange={handleOnChange}
         getAriaValueText={valuetext}
         aria-labelledby="discrete-slider"
         valueLabelDisplay="auto"
         step={10}
         marks
-        min={10}
+        min={0}
         max={50}
       />
-    </div>
+    </span>
   );
 }
 export default DiscreteSlider;
