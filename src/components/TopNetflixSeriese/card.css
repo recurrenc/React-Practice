@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@200&display=swap");
 * {
+  margin: 0;
+  padding: 0;
   font-family: "Heebo", sans-serif;
+  font-size: 62.5%;
 }
 .heading {
   width: 100vw;
@@ -10,7 +13,7 @@
   align-items: center;
   background: #fff203;
   color: #911c6e;
-  font-size: 1.8rem;
+  font-size: 3rem;
 }
 .heading > h1 {
   padding: 0.8rem;
@@ -20,7 +23,7 @@
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
-.img {
+/* .img {
   padding: 0.8rem;
 }
 .img > img {
@@ -29,18 +32,19 @@
   padding: 1rem;
   border: 0.2rem solid white;
   background: rgb(150, 99, 99);
-}
+} */
 
 .main {
   width: 100vw;
   height: 100wh;
   display: flex;
-  flex-wrap: wrap;
+  margin: 4rem auto;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.container {
+/* .container {
   flex: 45rem;
   position: relative;
   display: flex;
@@ -92,7 +96,7 @@
 
 .director h3 {
   text-align: left;
-}
+} */
 
 /* Responsivness management */
 
@@ -124,7 +128,7 @@
     border: 0.2rem solid white;
     background: rgb(150, 99, 99);
   }
-  .container {
+  /* .container {
     flex: 45rem;
     display: flex;
     align-items: center;
@@ -152,5 +156,74 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca",endColorstr="#1676e8",GradientType=1);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
       rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  }
+  } */
+}
+
+.container {
+  width: 80rem;
+  height: 35rem;
+  background-size: 100%;
+  box-shadow: 0 1rem 2rem -0.6rem #000;
+  display: flex;
+  position: relative;
+}
+.primary {
+  width: 8rem;
+  height: 3rem;
+  position: absolute;
+  font-size: 1rem;
+  font-weight: 800;
+  left: 3rem;
+  top: 55%;
+  border-radius: 1.1rem;
+  outline: none;
+  cursor: pointer;
+}
+.stars {
+  width: 13rem;
+  height: auto;
+
+  position: absolute;
+  font-size: 1.8rem;
+  left: 1rem;
+  top: 70%;
+  border-radius: 1.1rem;
+  outline: none;
+  cursor: pointer;
+}
+.img {
+  width: 10rem;
+  height: 25rem;
+  padding: 1rem;
+}
+
+.img > img {
+  width: 11.5rem;
+  height: 17rem;
+}
+
+.info {
+  background: transparent;
+  width: 35%;
+  margin: 0 2rem;
+}
+
+.title {
+  font-size: 5.5rem;
+  font-weight: bolder;
+}
+.director {
+  font-size: 2.5rem;
+}
+.runtime {
+  font-size: large;
+}
+
+.description {
+  width: 100%;
+  margin-top: 4rem;
+  background: transparent;
+  color: #273083;
+  font-weight: bolder;
+  font-size: 1.5rem;
 }

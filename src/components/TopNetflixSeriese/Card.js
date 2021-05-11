@@ -14,6 +14,9 @@ const Card = () => {
             <Child
               key={i}
               imgsrc={elem.imgsrc}
+              year={elem.year}
+              description={elem.description}
+              cover={elem.cover}
               title={elem.title}
               director={elem.director}
               genre={elem.genre}
