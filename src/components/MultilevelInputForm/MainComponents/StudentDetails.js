@@ -62,10 +62,12 @@ export default function StudentDetails() {
           id="department"
           onChange={handleInput}
           renderValue={inputValues.department}
-          options={MainList.course
-            .filter((e) => e.name === (inputValues.course || "B.Tech"))
-            .map((elem) => elem.departmets)
-            .reduce((p, n) => p.concat(n))}
+          options={
+            MainList.course
+              .filter((e) => e.name === (inputValues.course || "B.Tech"))
+              .map((elem) => elem.departmets)
+              .reduce((p, n) => p.concat(n)) //we can use .flat() instead of .reduce((p, n) => p.concat(n)) method
+          }
         />
 
         <DropDownInput
