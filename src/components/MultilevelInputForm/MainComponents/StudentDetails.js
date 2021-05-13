@@ -3,6 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import TextField from "@material-ui/core/TextField";
 import DropDownInput from "../FeedbackComponents/DropDownInput";
+import AutoCompleteDropDown from "../FeedbackComponents/AutoCompleteDropDown";
 export default function StudentDetails() {
   const [inputValues, setInputValues] = useState({
     firstname: "",
@@ -78,6 +79,8 @@ export default function StudentDetails() {
           renderValue={inputValues.semester}
           options={["I", "II", "III", "IV", "V", "VI", "VII", "VIII"]}
         />
+
+        <AutoCompleteDropDown />
 
         <Grid item xs={12} sm={6}>
           <TextField

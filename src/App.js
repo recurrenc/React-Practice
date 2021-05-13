@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import Card from "./components/TopNetflixSeriese/Card";
+import FeedbackSystem from "./components/MultilevelInputForm/FeedbackSystem";
 
 function App() {
   return (
     <>
-      <Card />
+      <FeedbackSystem />
     </>
   );
 }

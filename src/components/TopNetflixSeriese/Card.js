@@ -10,6 +10,7 @@ const Card = () => {
       </div>
       <div className="main">
         {ListData.map((elem, i) => {
+          console.log(elem);
           return (
             <Child
               key={i}
