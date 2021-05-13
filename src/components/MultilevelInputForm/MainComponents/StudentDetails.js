@@ -3,7 +3,8 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import TextField from "@material-ui/core/TextField";
 import DropDownInput from "../FeedbackComponents/DropDownInput";
-import AutoCompleteDropDown from "../FeedbackComponents/AutoCompleteDropDown";
+import MainList from "../FieldList/DepartmentCourseBranch";
+
 export default function StudentDetails() {
   const [inputValues, setInputValues] = useState({
     firstname: "",
@@ -54,22 +55,17 @@ export default function StudentDetails() {
           Name="Course"
           id="course"
           onChange={handleInput}
-          options={["B.Tech", "BCA", "M.Tech", "MCA", "B.Sc", "M.Sc"]}
+          options={MainList.course.map((e) => e.name)}
         />
         <DropDownInput
           Name="Department"
           id="department"
           onChange={handleInput}
           renderValue={inputValues.department}
-          options={[
-            "Computer Science",
-            "Information Technology",
-            "Electronics and Communication",
-            "Mechenical",
-            "Civil",
-            "Chemical",
-            "Industrial Production",
-          ]}
+          options={MainList.course
+            .filter((e) => e.name === (inputValues.course || "B.Tech"))
+            .map((elem) => elem.departmets)
+            .reduce((p, n) => p.concat(n))}
         />
 
         <DropDownInput
@@ -79,8 +75,6 @@ export default function StudentDetails() {
           renderValue={inputValues.semester}
           options={["I", "II", "III", "IV", "V", "VI", "VII", "VIII"]}
         />
-
-        <AutoCompleteDropDown />
 
         <Grid item xs={12} sm={6}>
           <TextField
