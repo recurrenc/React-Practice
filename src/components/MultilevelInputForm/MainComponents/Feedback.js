@@ -99,7 +99,7 @@ function Feedback() {
           scrollButtons="auto"
           aria-label="scrollable auto tabs example"
         >
-          {TeacherList.filter((e) => e.department === "IT" && e.semester === 4)
+          {TeacherList.filter((e) => e.department === "IT" && e.semester === 6)
             .map((e) => e.faculty)
             .flat()
             .map((Name, i) => {
