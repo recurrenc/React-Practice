@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -8,6 +8,7 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import DiscreteSlider from "../FeedbackComponents/DiscreteSlider";
 import Question from "../FeedbackQuestion/Question";
+import TeacherList from "../FieldList/TeacherList";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -50,36 +51,36 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const TeacherList = [
-  "Teacher1",
-  "Teacher2",
-  "Teacher3",
-  "Teacher4",
-  "Teacher5",
-  "Teacher6",
-  "Teacher7",
-  "Teacher8",
-];
+// const TeacherList = [
+//   "Teacher1",
+//   "Teacher2",
+//   "Teacher3",
+//   "Teacher4",
+//   "Teacher5",
+//   "Teacher6",
+//   "Teacher7",
+//   "Teacher8",
+// ];
 
 function Feedback() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
-  const [input, setInput] = useState([
-    {
-      teacher: "",
-      question1: "",
-      question2: "",
-      question3: "",
-      question4: "",
-      question5: "",
-      question6: "",
-      question7: "",
-      question8: "",
-      question9: "",
-      question10: "",
-      question11: "",
-    },
-  ]);
+  // const [input, setInput] = useState([
+  //   {
+  //     teacher: "",
+  //     question1: "",
+  //     question2: "",
+  //     question3: "",
+  //     question4: "",
+  //     question5: "",
+  //     question6: "",
+  //     question7: "",
+  //     question8: "",
+  //     question9: "",
+  //     question10: "",
+  //     question11: "",
+  //   },
+  // ]);
 
   const handleChange = (event, newValue) => {
     console.log(event.target);
@@ -98,9 +99,12 @@ function Feedback() {
           scrollButtons="auto"
           aria-label="scrollable auto tabs example"
         >
-          {TeacherList.map((Name, i) => {
-            return <Tab key={i} label={Name} {...a11yProps(i)} />;
-          })}
+          {TeacherList.filter((e) => e.department === "IT" && e.semester === 4)
+            .map((e) => e.faculty)
+            .flat()
+            .map((Name, i) => {
+              return <Tab key={i} label={Name} {...a11yProps(i)} />;
+            })}
         </Tabs>
       </AppBar>
 
