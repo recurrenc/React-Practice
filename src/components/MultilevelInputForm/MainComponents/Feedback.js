@@ -62,7 +62,10 @@ const useStyles = makeStyles((theme) => ({
 //   "Teacher8",
 // ];
 
-function Feedback() {
+function Feedback(props) {
+  console.log(
+    props.studentState.department + " " + props.studentState.semester
+  );
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
   // const [input, setInput] = useState([
@@ -99,7 +102,11 @@ function Feedback() {
           scrollButtons="auto"
           aria-label="scrollable auto tabs example"
         >
-          {TeacherList.filter((e) => e.department === "IT" && e.semester === 6)
+          {TeacherList.filter(
+            (e) =>
+              e.department == props.studentState.department &&
+              e.semester == props.studentState.semester
+          )
             .map((e) => e.faculty)
             .flat()
             .map((Name, i) => {

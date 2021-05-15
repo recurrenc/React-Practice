@@ -5,21 +5,21 @@ import TextField from "@material-ui/core/TextField";
 import DropDownInput from "../FeedbackComponents/DropDownInput";
 import MainList from "../FieldList/DepartmentCourseBranch";
 
-export default function StudentDetails() {
-  const [inputValues, setInputValues] = useState({
-    firstname: "",
-    lastname: "",
-    course: "",
-    department: "",
-    semester: "",
-    enrollment: "",
-    email: "",
-    mobile: "",
-  });
+export default function StudentDetails(props) {
+  // const [inputValues, setInputValues] = useState({
+  //   firstname: "",
+  //   lastname: "",
+  //   course: "",
+  //   department: "",
+  //   semester: "",
+  //   enrollment: "",
+  //   email: "",
+  //   mobile: "",
+  // });
   const handleInput = (event) => {
     const { name, value } = event.target;
     console.log(`name:${name}   value: ${value} `);
-    setInputValues({ ...inputValues, [name]: value });
+    props.setStudentState({ ...props.studentState, [name]: value });
   };
   return (
     <React.Fragment>
@@ -34,7 +34,7 @@ export default function StudentDetails() {
             name="firstname"
             label="First Name"
             onChange={handleInput}
-            value={inputValues.firstname}
+            value={props.studentState.firstname}
             fullWidth
             autoComplete="given-name"
           />
@@ -46,7 +46,7 @@ export default function StudentDetails() {
             name="lastname"
             label="Last Name"
             onChange={handleInput}
-            value={inputValues.lastname}
+            value={props.studentState.lastname}
             fullWidth
             autoComplete="family-name"
           />
@@ -61,10 +61,10 @@ export default function StudentDetails() {
           Name="Department"
           id="department"
           onChange={handleInput}
-          renderValue={inputValues.department}
+          renderValue={props.studentState.department}
           options={
             MainList.course
-              .filter((e) => e.name === (inputValues.course || "B.Tech"))
+              .filter((e) => e.name === (props.studentState.course || "B.Tech"))
               .map((elem) => elem.departmets)
               .reduce((p, n) => p.concat(n)) //we can use .flat() instead of .reduce((p, n) => p.concat(n)) method
           }
@@ -74,7 +74,7 @@ export default function StudentDetails() {
           Name="Semester"
           id="semester"
           onChange={handleInput}
-          renderValue={inputValues.semester}
+          renderValue={props.studentState.semester}
           options={["I", "II", "III", "IV", "V", "VI", "VII", "VIII"]}
         />
 
@@ -85,7 +85,7 @@ export default function StudentDetails() {
             name="enrollment"
             label="Enrollment Number"
             onChange={handleInput}
-            value={inputValues.enrollment}
+            value={props.studentState.enrollment}
             fullWidth
             autoComplete="shipping address-level2"
           />
@@ -96,7 +96,7 @@ export default function StudentDetails() {
             name="email"
             label="Email"
             onChange={handleInput}
-            value={inputValues.email}
+            value={props.studentState.email}
             fullWidth
           />
         </Grid>
@@ -106,7 +106,7 @@ export default function StudentDetails() {
             id="mobile"
             name="mobile"
             onChange={handleInput}
-            value={inputValues.mobile}
+            value={props.studentState.mobile}
             label="Mobile Number"
             fullWidth
             autoComplete="shipping postal-code"

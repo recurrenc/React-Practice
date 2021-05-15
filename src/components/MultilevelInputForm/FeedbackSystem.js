@@ -10,7 +10,7 @@ import StepLabel from "@material-ui/core/StepLabel";
 import Button from "@material-ui/core/Button";
 import Link from "@material-ui/core/Link";
 import Typography from "@material-ui/core/Typography";
-import AddressForm from "./MainComponents/StudentDetails";
+import StudentDetails from "./MainComponents/StudentDetails";
 import Review from "./MainComponents/Review";
 import Feedback from "./MainComponents/Feedback";
 
@@ -66,22 +66,19 @@ const useStyles = makeStyles((theme) => ({
 
 const steps = ["Students Details", "Feedback", "Review Your Feedbacks"];
 
-function getStepContent(step) {
-  switch (step) {
-    case 0:
-      return <AddressForm />;
-    case 1:
-      return <Feedback />;
-    case 2:
-      return <Review />;
-    default:
-      throw new Error("Unknown step");
-  }
-}
-
 export default function FeedbackSystem() {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
+  const [studentState, setStudentState] = React.useState({
+    firstname: "",
+    lastname: "",
+    course: "",
+    department: "",
+    semester: "",
+    enrollment: "",
+    email: "",
+    mobile: "",
+  });
 
   const handleNext = () => {
     setActiveStep(activeStep + 1);
@@ -90,6 +87,24 @@ export default function FeedbackSystem() {
   const handleBack = () => {
     setActiveStep(activeStep - 1);
   };
+
+  function getStepContent(step, studentState, setStudentState) {
+    switch (step) {
+      case 0:
+        return (
+          <StudentDetails
+            studentState={studentState}
+            setStudentState={setStudentState}
+          />
+        );
+      case 1:
+        return <Feedback studentState={studentState} />;
+      case 2:
+        return <Review />;
+      default:
+        throw new Error("Unknown step");
+    }
+  }
 
   return (
     <>
@@ -126,7 +141,7 @@ export default function FeedbackSystem() {
               </>
             ) : (
               <>
-                {getStepContent(activeStep)}
+                {getStepContent(activeStep, studentState, setStudentState)}
                 <div className={classes.buttons}>
                   {activeStep !== 0 && (
                     <Button onClick={handleBack} className={classes.button}>

@@ -1,7 +1,7 @@
 const TeacherList = [
   {
-    department: "IPE",
-    semester: 1,
+    department: "Industrial Production",
+    semester: "I",
     faculty: [
       "Mr. Sonu Ram",
       "Dr. Bhaskar Sharma",
@@ -20,8 +20,8 @@ const TeacherList = [
       "Ms. Preeti Singh",
       "Mr. Mukesh Kumar Ray",
     ],
-    department: "CHEM",
-    semester: 1,
+    department: "Chemical",
+    semester: "I",
   },
   {
     faculty: [
@@ -33,8 +33,8 @@ const TeacherList = [
       "Mr. Anurag Singh",
       "Mr. Rajeev Shrivastava",
     ],
-    department: "IT",
-    semester: 1,
+    department: "Information Technology",
+    semester: "I",
   },
 
   {
@@ -47,8 +47,8 @@ const TeacherList = [
       "Mr. Kailash Kumar Borkar",
       "Mr. Rajeev Shrivastava",
     ],
-    department: "ECE",
-    semester: 1,
+    department: "Electronics and Communication",
+    semester: "I",
   },
   {
     faculty: [
@@ -60,8 +60,8 @@ const TeacherList = [
       "Mr. Somnath Singroul",
       "Mr. Annu Lal Mahato",
     ],
-    department: "CSE",
-    semester: 1,
+    department: "Computer Science",
+    semester: "I",
   },
   {
     faculty: [
@@ -72,8 +72,8 @@ const TeacherList = [
       "Mr. Vinod Kumar",
       "Mr. Mukesh Kumar Ray",
     ],
-    department: "MECH",
-    semester: 1,
+    department: "Mechenical",
+    semester: "I",
   },
   {
     faculty: [
@@ -84,8 +84,8 @@ const TeacherList = [
       "Ms. Preeti Singh",
       "Mr. Mukesh Kumar Ray",
     ],
-    department: "CIVIL",
-    semester: 1,
+    department: "Civil",
+    semester: "I",
   },
   {
     faculty: [
@@ -96,8 +96,8 @@ const TeacherList = [
       "Mr. Rochak Pandey",
       "Ms. Tanuja Gupta",
     ],
-    department: "CIVIL",
-    semester: 4,
+    department: "Civil",
+    semester: "IV",
   },
   {
     faculty: [
@@ -107,8 +107,8 @@ const TeacherList = [
       "Ms. Nikita Kashyap",
       "Mr. Chandrashekhar",
     ],
-    department: "CSE",
-    semester: 4,
+    department: "Computer Science",
+    semester: "IV",
   },
   {
     faculty: [
@@ -119,8 +119,8 @@ const TeacherList = [
       "Mr. Manish Bhaskar",
       "Mr. MS Anoop Sahu",
     ],
-    department: "MECH",
-    semester: 4,
+    department: "Mechenical",
+    semester: "IV",
   },
   {
     faculty: [
@@ -130,8 +130,8 @@ const TeacherList = [
       "Mr. Agnivesh Pandey",
       "Mr. Amar Pandey",
     ],
-    department: "IT",
-    semester: 4,
+    department: "Information Technology",
+    semester: "IV",
   },
   {
     faculty: [
@@ -140,8 +140,8 @@ const TeacherList = [
       "Mr. Leeladhar",
       "Ms. Arpita",
     ],
-    department: "IPE",
-    semester: 4,
+    department: "Industrial Production",
+    semester: "IV",
   },
   {
     faculty: [
@@ -151,8 +151,8 @@ const TeacherList = [
       "Dr. Neetu Baghel",
       "Mr. Saurabh Mesharam",
     ],
-    department: "CHEM",
-    semester: 4,
+    department: "Chemical",
+    semester: "IV",
   },
   {
     faculty: [
@@ -163,8 +163,8 @@ const TeacherList = [
       "Dr. P.S. Shrivastava",
       "Ms. Pragati Patharia",
     ],
-    department: "ECE",
-    semester: 4,
+    department: "Electronics and Communication",
+    semester: "IV",
   },
   {
     faculty: [
@@ -176,8 +176,8 @@ const TeacherList = [
       "Mr. Saurabh Mesharam",
       "Dr. Sandeep Dharmadhikari",
     ],
-    department: "CHEM",
-    semester: 6,
+    department: "Chemical",
+    semester: "VI",
   },
 
   {
@@ -188,8 +188,8 @@ const TeacherList = [
       "Mr. Pankaj Chandra",
       "Dr. Amit Kumar Khaskalam",
     ],
-    department: "IT",
-    semester: 6,
+    department: "Information Technology",
+    semester: "VI",
   },
   {
     faculty: [
@@ -200,8 +200,8 @@ const TeacherList = [
       "Dr. Devendra Kumar Singh",
       "Ms. Raksha Pandey",
     ],
-    department: "CSE",
-    semester: 6,
+    department: "Computer Science",
+    semester: "VI",
   },
   {
     faculty: [
@@ -213,8 +213,8 @@ const TeacherList = [
       "Dr. Rajender Kumar",
       "Dr. V.V.S Surya Kumar",
     ],
-    department: "CIVIL",
-    semester: 6,
+    department: "Civil",
+    semester: "VI",
   },
   {
     faculty: [
@@ -225,8 +225,8 @@ const TeacherList = [
       "Mrs. Shweta Singh",
       "Mr. Prashant Jangde",
     ],
-    department: "MECH",
-    semester: 6,
+    department: "Mechenical",
+    semester: "VI",
   },
   {
     faculty: [
@@ -234,8 +234,8 @@ const TeacherList = [
       "Mrs. Princy Matlani",
       "Mr. Nishant Behar",
     ],
-    department: "CSE",
-    semester: 8,
+    department: "Computer Science",
+    semester: "VIII",
   },
   {
     faculty: [
@@ -245,8 +245,8 @@ const TeacherList = [
       "Mr. Santosh Soni",
       "Mr. Pankaj Chandra",
     ],
-    department: "IT",
-    semester: 8,
+    department: "Information Technology",
+    semester: "VIII",
   },
   {
     faculty: [
@@ -255,8 +255,8 @@ const TeacherList = [
       "Dr. Pankaj Kumar Gupta",
       "Mr. Biplab Das",
     ],
-    department: "MECH",
-    semester: 8,
+    department: "Mechenical",
+    semester: "VIII",
   },
   {
     faculty: [
@@ -266,8 +266,8 @@ const TeacherList = [
       "Dr. Sandeep Dharmadhikari",
       "Mr. Neeraj Chandraker",
     ],
-    department: "CHEM",
-    semester: 8,
+    department: "Chemical",
+    semester: "VIII",
   },
   {
     faculty: [
@@ -278,8 +278,8 @@ const TeacherList = [
       "Dr. M.C. Rao",
       "Mr. Nikhil Kumar",
     ],
-    department: "CIVIL",
-    semester: 8,
+    department: "Civil",
+    semester: "VIII",
   },
 ];
 
