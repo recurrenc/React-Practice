@@ -5,48 +5,97 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import Paper from "@material-ui/core/Paper";
+import Grid from "@material-ui/core/Grid";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     minWidth: 275,
     width: 400,
     margin: 4,
     boxShadow: "0 8px 6px -6px black",
+    background: "#bdbdbd",
+    borderRadius: 6,
   },
-  bullet: {
-    display: "inline-block",
-    margin: "0 2px",
-    transform: "scale(0.8)",
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: "center",
+    fontSize: 20,
+    color: "#161625",
+    background: "#bdbdbd",
   },
-  title: {
-    fontSize: 14,
+  superPaper: {
+    display: "flex",
+    justifyContent: "space-around",
+    alignItems: "center",
   },
-  pos: {
-    marginBottom: 12,
-  },
-});
+}));
 
 export default function StaticsticsCard(props) {
+  const {
+    state,
+    active,
+    deaths,
+    recovered,
+    confirmed,
+    deltaconfirmed,
+    deltadeaths,
+    deltarecovered,
+  } = props.data;
   const classes = useStyles();
   return (
     <Card className={classes.root} variant="outlined">
       <CardContent>
-        
-        <Typography variant="h5" component="h2">
-          {props.data.state}
+        <Typography
+          style={{
+            textAlign: "center",
+            color: "#fff",
+            fontSize: "22px",
+            fontWeight: "20px",
+            fontStyle: "bold",
+            textTransform: "uppercase",
+            marginBottom: 6,
+            background: "#161625",
+          }}
+          variant="h5"
+          component="h2"
+        >
+          {state}
         </Typography>
-        <Typography className={classes.pos} color="textSecondary">
-          adjective
-        </Typography>
-        <Typography variant="body2" component="p">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
-        </Typography>
+        <Grid container spacing={0}>
+          <Grid item lg={12} sm={12} xs={12}>
+            <Paper className={classes.paper}>
+              Total Active <br /> {active}
+            </Paper>
+          </Grid>
+          <Grid className={classes.superPaper} item lg={12} sm={12} xs={12}>
+            <Paper className={classes.paper}>
+              Total Confirmed <br />
+              {confirmed}
+            </Paper>
+            <Paper className={classes.paper}>
+              New Confirmed <br /> {deltaconfirmed}
+            </Paper>
+          </Grid>
+
+          <Grid className={classes.superPaper} item lg={12} sm={12} xs={12}>
+            <Paper className={classes.paper}>
+              Total Recovered <br /> {recovered}{" "}
+            </Paper>
+            <Paper className={classes.paper}>
+              New Recovered <br /> {deltarecovered}{" "}
+            </Paper>
+          </Grid>
+          <Grid className={classes.superPaper} item lg={12} sm={12} xs={12}>
+            <Paper className={classes.paper}>
+              Total Deaths <br /> {deaths}{" "}
+            </Paper>
+            <Paper className={classes.paper}>
+              New Deaths <br /> {deltadeaths}{" "}
+            </Paper>
+          </Grid>
+        </Grid>
       </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
     </Card>
   );
 }

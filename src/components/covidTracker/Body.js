@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
     alignItems: "center",
     justifyContent: "center",
+    background: "#3f51b5",
   },
 }));
 

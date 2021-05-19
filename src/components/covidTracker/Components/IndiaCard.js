@@ -16,21 +16,20 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 10,
   },
 
-  title: {
-    fontSize: 14,
-  },
   pos: {
     marginBottom: 12,
   },
   paper: {
     padding: theme.spacing(2),
     textAlign: "center",
+    fontSize: 20,
     color: "#4c75f2",
     background: "#161625",
   },
   superPaper: {
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "space-around",
+    alignItems: "center",
   },
 }));
 
@@ -62,30 +61,37 @@ export default function IndiaCard(props) {
         >
           {state}
         </Typography>
-        <Grid container spacing={3}>
+        <Grid container spacing={0}>
           <Grid item lg={3} sm={6} xs={12}>
-            <Paper className={classes.paper}>Total Active : {active}</Paper>
+            <Paper className={classes.paper}>
+              Total Active <br /> {active}
+            </Paper>
           </Grid>
           <Grid className={classes.superPaper} item lg={3} sm={6} xs={12}>
             <Paper className={classes.paper}>
-              Total Confirmed : {confirmed}
+              Total Confirmed <br />
+              {confirmed}
             </Paper>
             <Paper className={classes.paper}>
-              New Confirmed : {deltaconfirmed}
+              New Confirmed <br /> {deltaconfirmed}
             </Paper>
           </Grid>
 
           <Grid className={classes.superPaper} item lg={3} sm={6} xs={12}>
             <Paper className={classes.paper}>
-              Total Recovered : {recovered}{" "}
+              Total Recovered <br /> {recovered}{" "}
             </Paper>
             <Paper className={classes.paper}>
-              New Recovered : {deltarecovered}{" "}
+              New Recovered <br /> {deltarecovered}{" "}
             </Paper>
           </Grid>
           <Grid className={classes.superPaper} item lg={3} sm={6} xs={12}>
-            <Paper className={classes.paper}>Total Deaths : {deaths} </Paper>
-            <Paper className={classes.paper}>New Deaths : {deltadeaths} </Paper>
+            <Paper className={classes.paper}>
+              Total Deaths <br /> {deaths}{" "}
+            </Paper>
+            <Paper className={classes.paper}>
+              New Deaths <br /> {deltadeaths}{" "}
+            </Paper>
           </Grid>
         </Grid>
       </CardContent>
