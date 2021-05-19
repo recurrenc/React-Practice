@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import StaticsticsCard from "./Components/StaticsticsCard";
 import api from "./API";
+import IndiaCard from "./Components/IndiaCard";
 const useStyles = makeStyles((theme) => ({
   mainBody: {
     display: "flex",
@@ -21,6 +22,7 @@ const Body = () => {
       data = await fetch(api);
       const tempData = await data.json();
       data = tempData.statewise;
+      console.log(data);
       setData(data);
     } catch (error) {
       console.log(error);
@@ -33,8 +35,9 @@ const Body = () => {
   return (
     <div className={classes.mainBody}>
       {Data.map((state, i) => {
-        console.log(state);
-        return <StaticsticsCard key={i} data={state} />;
+        if (i) {
+          return <StaticsticsCard key={i} data={state} />;
+        } else return <IndiaCard key={i} data={state} />;
       })}
     </div>
   );
