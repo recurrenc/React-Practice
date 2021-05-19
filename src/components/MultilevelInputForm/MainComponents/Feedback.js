@@ -104,8 +104,8 @@ function Feedback(props) {
         >
           {TeacherList.filter(
             (e) =>
-              e.department == props.studentState.department &&
-              e.semester == props.studentState.semester
+              e.department === props.studentState.department &&
+              e.semester === props.studentState.semester
           )
             .map((e) => e.faculty)
             .flat()
