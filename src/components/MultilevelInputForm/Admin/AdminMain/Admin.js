@@ -7,7 +7,6 @@ import {
   ThemeProvider,
 } from "@material-ui/core";
 import Header from "../components/Header";
-import PageHeader from "../components/PageHeader";
 
 import Employees from "../pages/Employees/Employees";
 
