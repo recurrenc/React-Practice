@@ -23,7 +23,6 @@ const Body = () => {
       data = await fetch(api);
       const tempData = await data.json();
       data = tempData.statewise;
-      console.log(data);
       setData(data);
     } catch (error) {
       console.log(error);
