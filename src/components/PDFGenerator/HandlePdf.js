@@ -14,7 +14,13 @@ const HandlePdf = () => {
     setState({ [name]: value });
 
   const createAndDownloadPdf = () => {
-    axios.post("/create-pdf", state);
+    axios
+      .post("/create-pdf", state)
+      .then(() => axios.get("/fetch-pdf", { responseType: "blob" }))
+      .then((res) => {
+        const pdfBlob = new Blob([res.data], { type: "application/pdf" });
+        saveAs(pdfBlob, "generatedDocument.pdf");
+      });
   };
 
   return (
