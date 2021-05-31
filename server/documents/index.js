@@ -1,4 +1,4 @@
-module.exports = ({ name, price1, price2, receiptId }) => {
+module.exports = ({ name, grade, receiptId }) => {
   const today = new Date();
   return `
     <!doctype html>
@@ -81,15 +81,21 @@ module.exports = ({ name, price1, price2, receiptId }) => {
        </head>
        <body>
           <div class="invoice-box">
+             <h1 class="justify-center">
+               WELCOME TO DSC-GGV
+             </h1>
+             <h1 class="justify-center">
+               CERTIFICATE OF COMPLETION
+             </h1>
              <table cellpadding="0" cellspacing="0">
                 <tr class="top">
                    <td colspan="2">
                       <table>
                          <tr>
-                            <td class="title"><img  src="https://i2.wp.com/cleverlogos.co/wp-content/uploads/2018/05/reciepthound_1.jpg?fit=800%2C600&ssl=1"
+                            <td class="title"><img  src="https://raw.githubusercontent.com/DSCGGV/dscggv.github.io/master/images/favicon.png"
                                style="width:100%; max-width:156px;"></td>
                             <td>
-                               Datum: ${`${today.getDate()}. ${
+                               Date: ${`${today.getDate()}. ${
                                  today.getMonth() + 1
                                }. ${today.getFullYear()}.`}
                             </td>
@@ -102,32 +108,26 @@ module.exports = ({ name, price1, price2, receiptId }) => {
                       <table>
                          <tr>
                             <td>
-                               Customer name: ${name}
+                               Participants Name : ${name}
                             </td>
                             <td>
-                               Receipt number: ${receiptId}
+                               Certificate ID : ${receiptId}
                             </td>
                          </tr>
                       </table>
                    </td>
                 </tr>
-                <tr class="heading">
-                   <td>Bought items:</td>
-                   <td>Price</td>
-                </tr>
-                <tr class="item">
-                   <td>First item:</td>
-                   <td>${price1}$</td>
-                </tr>
-                <tr class="item">
-                   <td>Second item:</td>
-                   <td>${price2}$</td>
-                </tr>
+                
              </table>
-             <br />
-             <h1 class="justify-center">Total price: ${
-               parseInt(price1) + parseInt(price2)
-             }$</h1>
+            <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+              when an unknown printer took a galley of type and scrambled it to make a type
+               specimen book. It has survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was popularised 
+                in the 1960s with the release of Letraset sheets containing Lorem Ipsum 
+                passages, and more recently with desktop publishing 
+            software like Aldus PageMaker including versions of Lorem Ipsum.
+            </h3>
           </div>
        </body>
     </html>
