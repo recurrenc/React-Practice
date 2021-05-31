@@ -14,7 +14,6 @@ app.use(bodyParser.json());
 // /create-pdf route
 
 app.post("/create-pdf", (req, res) => {
-  console.log(req.body);
   pdf
     .create(pdfTemplate(req.body), {})
     .toFile(
