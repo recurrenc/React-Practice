@@ -37,6 +37,7 @@ This repo contain React projects made by [Sonu Kumar](https://github.com/SonuKum
     │   │    ├── DynamicCardGenerator
     │   │    ├── DynamicGreeting
     │   │    ├── MultiLevelInputForm (FeedbackSystem)
+    │   │    ├── PDFGenerator
     │   │    ├── TopNetflixSeriese
     │   │    └── practiceSessions[1,2]
     │   ├── App.css
@@ -66,3 +67,11 @@ This repo contain React projects made by [Sonu Kumar](https://github.com/SonuKum
 
 ![Covid Tracker](https://github.com/SonuKumar81800/React-Practice/blob/master/public/covidTracker.png?raw=true)
 ![Covid Tracker1](https://github.com/SonuKumar81800/React-Practice/blob/master/public/covidTracker1.png?raw=true)
+
+<br>
+
+### [Dynamic Certificate Generator](https://github.com/SonuKumar81800/React-Practice/tree/master/src/components/PDFGenerator)
+
+<br>
+
+![Dynamic Certificate Generator](https://github.com/SonuKumar81800/React-Practice/blob/master/public/certificate.png?raw=true)
