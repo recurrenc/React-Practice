@@ -1,5 +1,6 @@
 import React from "react";
 import clsx from "clsx";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import List from "@material-ui/core/List";
@@ -49,10 +50,6 @@ export default function Side() {
     <EqualizerIcon />,
   ];
 
-  const handleNav = (index) => {
-    return optionsIcons[index];
-  };
-
   const list = (anchor) => (
     <div
       className={clsx(classes.list, {
@@ -62,12 +59,52 @@ export default function Side() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List>
-        <ListItem button key="Home" onClick={handleNav(1)}>
-          <ListItemIcon>{optionsIcons[0]}</ListItemIcon>
-          <ListItemText primary={"Home"} />
-        </ListItem>
-      </List>
+      <Router>
+        <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+          <List>
+            <ListItem button key="Home">
+              <ListItemIcon>{optionsIcons[0]}</ListItemIcon>
+              <ListItemText primary={"Home"} />
+            </ListItem>
+          </List>
+        </Link>
+        <Link
+          to="/gitstat"
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          <List>
+            <ListItem button key="Github Status">
+              <ListItemIcon>{optionsIcons[1]}</ListItemIcon>
+              <ListItemText primary={"Github Status"} />
+            </ListItem>
+          </List>
+        </Link>
+
+        <Link
+          to="/lifeEvent"
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          <List>
+            <ListItem button key="Life Event">
+              <ListItemIcon>{optionsIcons[2]}</ListItemIcon>
+              <ListItemText primary={"Life Event"} />
+            </ListItem>
+          </List>
+        </Link>
+
+        <Link
+          to="/acheivements"
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          <List>
+            <ListItem button key="Acheivements">
+              <ListItemIcon>{optionsIcons[3]}</ListItemIcon>
+              <ListItemText primary={"Acheivements"} />
+            </ListItem>
+          </List>
+        </Link>
+      </Router>
+
       <Divider />
       {/* <List>
         {["All mail", "Trash", "Spam"].map((text, index) => (
