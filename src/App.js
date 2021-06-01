@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
-import Portfolio from "./components/Portfolio/Portfolio";
+import Resume from "./components/Portfolio/comps/Resume/Resume";
+// import Portfolio from "./components/Portfolio/Portfolio";
 // import HandlePdf from "./components/PDFGenerator/HandlePdf";
 // import CovidIndia from "./components/covidTracker/CovidIndia";
 // import Admin from "./components/MultilevelInputForm/Admin/AdminMain/Admin";
@@ -13,7 +14,8 @@ function App() {
       {/* <Admin /> */}
       {/* <CovidIndia /> */}
       {/* <HandlePdf /> */}
-      <Portfolio />
+      {/* <Portfolio /> */}
+      <Resume />
     </>
   );
 }

@@ -5,12 +5,13 @@ import Container from "@material-ui/core/Container";
 const GitStats = () => {
   return (
     <div>
-      <Container maxWidth="sm">
+      <Container maxWidth="xl" style={{ paddingTop: "12px" }}>
         <Typography
           component="div"
-          style={{ backgroundColor: "#cfe8fc", height: "100vh" }}
-        />
-        <h1>Hello from github stats</h1>
+          style={{ backgroundColor: "#cfe8fc", height: "90vh" }}
+        >
+          Hello from github stats page
+        </Typography>
       </Container>
     </div>
   );

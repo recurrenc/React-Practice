@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bound {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+}
+
+.container {
+  padding: 0px 15px;
+  width: 730px;
+  height: 930px;
+  background: #fff;
+}
+.header {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  height: 160px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 5px solid yellow;
+}
+
+.profilePic {
+  width: 160px;
+  height: 160px;
+  margin: auto;
+  z-index: 3;
+  border-radius: 50%;
+  border: 5px solid yellow;
+}
+
+.profilePic > img {
+  margin: auto;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  mask-image: cross-fade(#eee);
+}
+
+.profileDetails {
+  display: flex;
+  width: 550px;
+  height: 100%;
+}
+
+.details {
+  margin: 5px;
+  width: 300px;
+  height: 100%;
+}
+
+.details > .name {
+  letter-spacing: 4px;
+  font-size: 30px;
+  font-weight: 650;
+  text-align: center;
+  margin-top: 20px;
+  color: rgb(26, 49, 151);
+  border-bottom: 3px solid gray;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.details > .role {
+  text-align: left;
+  color: rgb(3, 20, 99);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding-top: 10px;
+}
+
+.social > a {
+  text-decoration: none;
+  font-size: 20px;
+  color: inherit;
+  text-align: center;
+}
+.social > img {
+  width: 30px;
+  margin: 0 20px;
+  border-radius: 50%;
+}
