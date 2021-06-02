@@ -91,9 +91,42 @@ const Resume = () => {
             <p>ACHIEVEMENTS AND CERTIFICATION</p>
           </div>
 
-          <ul>
-            <li>LinkedIn Certified:- </li>
-          </ul>
+          <div class="certified">
+            <div className="name">
+              <a
+                style={{ textDecoration: "none", color: "inherit" }}
+                href="https://www.linkedin.com/in/sonukumar81800/"
+              >
+                LinkedIn Certified
+              </a>
+            </div>
+            <div className="seperator">:-</div>
+            <div className="cert">
+              Javascript || Node js || React Js || MnogoDB || JSON || NoSQL ||
+              REST APIs || GIT || Front-end Developement || Object-Oriented
+              Programming (OOP) || HTML || C || C++ || Microsoft Word ||
+              Microsoft Power Point || Microsoft Excel
+            </div>
+          </div>
+          <div class="certified">
+            <div className="name">
+              <a
+                style={{ textDecoration: "none", color: "inherit" }}
+                href="https://www.linkedin.com/in/sonukumar81800/"
+              >
+                Hackerrank Certified
+              </a>
+            </div>
+            <div className="seperator">:-</div>
+            <div className="cert">
+              <div className="subcert">
+                Assessments : Java || Problem Solving || Python
+              </div>
+              <div className="subcert">
+                Five Star : Java || Problem Solving || 10 Days of JS || C
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Main Body End  */}

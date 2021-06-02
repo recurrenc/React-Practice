@@ -134,3 +134,19 @@ td {
   background: #fff;
   text-align: center;
 }
+
+.certified {
+  display: flex;
+  padding: 5px;
+  margin: 10px 0;
+}
+.seperator {
+  margin: auto;
+  padding: 10px;
+}
+.certified > .name {
+  margin: auto;
+  padding: 5px;
+  text-align: center;
+  /* width: 250px; */
+}
