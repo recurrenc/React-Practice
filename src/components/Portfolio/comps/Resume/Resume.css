@@ -12,15 +12,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw;
+  height: 100vh; */
   background: #000;
 }
 
 .container {
   padding: 0px 15px;
   width: 730px;
-  height: 930px;
+  /* height: 930px; */
   background: #fff;
 }
 .header {
@@ -109,7 +109,7 @@
   /* border-bottom: 2px solid blue; */
   width: fit-content;
   letter-spacing: 2px;
-  font-size: 16[x];
+  font-size: 18px;
   font-weight: 600;
 }
 
@@ -137,16 +137,40 @@ td {
 
 .certified {
   display: flex;
+  align-items: center;
+  justify-content: left;
   padding: 5px;
   margin: 10px 0;
 }
+
+.certified > .name {
+  color: rgb(88, 2, 168);
+  font-weight: bold;
+}
 .seperator {
-  margin: auto;
   padding: 10px;
 }
 .certified > .name {
-  margin: auto;
   padding: 5px;
-  text-align: center;
-  /* width: 250px; */
+}
+
+.softSkills {
+  display: flex;
+}
+.softSkills > li {
+  padding: 0 10px;
+  width: max-content;
+  color: rgb(102, 84, 84);
+}
+
+.softSkills > li::marker {
+  color: blueviolet;
+  font-size: 19px;
+}
+
+.skill {
+  background: #575757;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }

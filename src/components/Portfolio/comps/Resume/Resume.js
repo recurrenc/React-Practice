@@ -52,7 +52,6 @@ const Resume = () => {
           <div className="heading">
             <p>ACADEMIC DETAILS</p>
           </div>
-
           <table>
             <tr>
               <th>Program</th>
@@ -90,7 +89,6 @@ const Resume = () => {
           <div className="heading">
             <p>ACHIEVEMENTS AND CERTIFICATION</p>
           </div>
-
           <div class="certified">
             <div className="name">
               <a
@@ -112,9 +110,9 @@ const Resume = () => {
             <div className="name">
               <a
                 style={{ textDecoration: "none", color: "inherit" }}
-                href="https://www.linkedin.com/in/sonukumar81800/"
+                href="https://www.hackerrank.com/sonu_kumar_08"
               >
-                Hackerrank Certified
+                Hackerrank <br /> Certified
               </a>
             </div>
             <div className="seperator">:-</div>
@@ -127,7 +125,63 @@ const Resume = () => {
               </div>
             </div>
           </div>
+
+          <div className="heading">
+            <p>TOOLS & TECHNOLOGY || SOFT SKILLS</p>
+          </div>
+          <div className="skill">
+            <img
+              src="https://img.shields.io/badge/PROGRAMMING_/_SCRIPTING_LANGUAGES-JavaScript,_Java,_C,_C++-informational?style=flat&logo=JavaScript&logoColor=f7df1e&color=003366"
+              alt="programmingLang"
+            />
+            <img
+              src="https://img.shields.io/badge/OPERATING_SYSTEM-WINDOWS,_LINUX-informational?style=flat&logo=Linux&logoColor=fffff&color=003366"
+              alt=""
+            />
+            <img
+              src="https://img.shields.io/badge/MARKUP_LANGUAGES-HTML,_XML-informational?style=flat&logo=HTML5&logoColor=fffff&color=003366"
+              alt="MarkupLang"
+            />
+            <img
+              src="https://img.shields.io/badge/FRAMEWORK-Reactjs,_Nodejs,_Express-informational?style=flat&logo=Node.js&logoColor=fffff&color=003366"
+              alt=""
+            />
+            <img
+              src="https://img.shields.io/badge/STYLESHEET_LANGUAGES-CSS-informational?style=flat&logo=CSS3&logoColor=fffff&color=003366"
+              alt=""
+            />
+            <img
+              src="https://img.shields.io/badge/DATABASE-MONGODB,_SQL-informational?style=flat&logo=MongoDB&logoColor=47A248&color=003366"
+              alt="Database"
+            />
+            <img
+              src="https://img.shields.io/badge/FAVORITE_TEXT_EDITOR-VISUAL_STUDIO_CODE-informational?style=flat&logo=Xcode&logoColor=fffff&color=003366"
+              alt=""
+            />
+          </div>
+          <div className="softSkills">
+            <li>Problem Solving Attitude</li>
+            <li>Self Motivated</li>
+            <li>Decision Making</li>
+            <li>Quick Lerner</li>
+          </div>
+          <div className="softSkills">
+            <li>Conflict Resolution</li>
+          </div>
         </div>
+
+        <div className="heading">
+          <p>GITHUB STATISTICS</p>
+        </div>
+
+        <img
+          src="https://github-readme-streak-stats.herokuapp.com/?user=SonuKumar81800&theme=chartreuse-dark&layout=compact"
+          alt=""
+        />
+        <img
+          src="https://github-profile-trophy.vercel.app/?username=SonuKumar81800&column=2&row=2&layout=compact&theme=darkhub&no-frame=true&no-bg=true"
+          alt=""
+        />
 
         {/* Main Body End  */}
 
