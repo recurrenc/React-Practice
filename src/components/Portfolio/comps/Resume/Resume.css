@@ -198,3 +198,7 @@ td {
 .gitstats > .stats > img {
   width: 460px;
 }
+
+.footer {
+  height: 20px;
+}
