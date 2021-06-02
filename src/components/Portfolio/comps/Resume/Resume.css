@@ -149,6 +149,9 @@ td {
 }
 .seperator {
   padding: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(119, 87, 87);
 }
 .certified > .name {
   padding: 5px;
@@ -173,4 +176,25 @@ td {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.gitstats {
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+}
+.gitstats > .streak > img {
+  width: 500px;
+}
+
+.gitstats > .badge > img {
+  height: 195px;
+}
+
+.gitstats > .mulang > img {
+  height: 225px;
+}
+
+.gitstats > .stats > img {
+  width: 460px;
 }

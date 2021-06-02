@@ -174,14 +174,32 @@ const Resume = () => {
           <p>GITHUB STATISTICS</p>
         </div>
 
-        <img
-          src="https://github-readme-streak-stats.herokuapp.com/?user=SonuKumar81800&theme=chartreuse-dark&layout=compact"
-          alt=""
-        />
-        <img
-          src="https://github-profile-trophy.vercel.app/?username=SonuKumar81800&column=2&row=2&layout=compact&theme=darkhub&no-frame=true&no-bg=true"
-          alt=""
-        />
+        <div className="gitstats">
+          <div className="streak">
+            <img
+              src="https://github-readme-streak-stats.herokuapp.com/?user=SonuKumar81800&theme=chartreuse-dark&layout=compact"
+              alt=""
+            />
+          </div>
+          <div className="badge">
+            <img
+              src="https://github-profile-trophy.vercel.app/?username=SonuKumar81800&column=2&row=2&layout=compact&theme=darkhub&no-frame=true&no-bg=true"
+              alt=""
+            />
+          </div>
+          <div className="mulang">
+            <img
+              src="https://github-readme-stats.vercel.app/api/top-langs/?username=SonuKumar81800&theme=chartreuse-dark&langs_count=5&count_private=true"
+              alt=""
+            />
+          </div>
+          <div className=" stats">
+            <img
+              src="https://github-readme-stats.vercel.app/api/?username=SonuKumar81800&theme=chartreuse-dark&count_private=true&show_icons=true&line_height=33"
+              alt=""
+            />
+          </div>
+        </div>
 
         {/* Main Body End  */}
 
