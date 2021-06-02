@@ -2,7 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
+/* Header style */
 
 .bound {
   display: flex;
@@ -25,7 +29,7 @@
   height: 160px;
   display: flex;
   justify-content: space-between;
-  border-bottom: 5px solid yellow;
+  border-bottom: 5px solid rgb(141, 141, 133);
 }
 
 .profilePic {
@@ -34,7 +38,7 @@
   margin: auto;
   z-index: 3;
   border-radius: 50%;
-  border: 5px solid yellow;
+  border: 5px solid rgb(180, 180, 82);
 }
 
 .profilePic > img {
@@ -73,11 +77,15 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.socialDetails {
+  margin-top: 30px;
+}
+
 .social {
   display: flex;
   align-items: center;
   justify-content: left;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
 .social > a {
@@ -88,6 +96,41 @@
 }
 .social > img {
   width: 30px;
-  margin: 0 20px;
+  margin: 0 10px;
   border-radius: 50%;
+}
+
+/* Main Body style */
+
+.heading {
+  display: flex;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  /* border-bottom: 2px solid blue; */
+  width: fit-content;
+  letter-spacing: 2px;
+  font-size: 16[x];
+  font-weight: 600;
+}
+
+table {
+  width: 100%;
+  background: rgb(196, 160, 160);
+}
+
+th {
+  color: blueviolet;
+}
+
+table,
+th,
+td {
+  border: 2px solid white;
+}
+
+th,
+td {
+  padding: 5px;
+  background: #fff;
+  text-align: center;
 }

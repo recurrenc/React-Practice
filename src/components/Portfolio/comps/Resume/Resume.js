@@ -6,9 +6,14 @@ import lin from "./img/linkedin.png";
 import eml from "./img/email.png";
 
 const Resume = () => {
+  React.useEffect(() => {
+    document.title = "Resume | Sonu Kumar";
+  }, []);
   return (
     <div className="bound">
       <div className="container">
+        {/* Header Start */}
+
         <div className="header">
           <div className="profilePic">
             <img src={ppic} alt="Profile" />
@@ -18,7 +23,7 @@ const Resume = () => {
               <div className="name">SONU KUMAR</div>
               <div className="role">Member @ Developer Student Club-GGV</div>
               <div className="role">
-                Who is passionate about exploting and learning new stuffs.
+                Who is passionate about exploring and learning new stuffs.
               </div>
             </div>
             <div className="socialDetails">
@@ -39,7 +44,60 @@ const Resume = () => {
             </div>
           </div>
         </div>
-        <div className="main"></div>
+
+        {/* Header End  */}
+
+        {/* Main Body Start  */}
+        <div className="main">
+          <div className="heading">
+            <p>ACADEMIC DETAILS</p>
+          </div>
+
+          <table>
+            <tr>
+              <th>Program</th>
+              <th>Institute</th>
+              <th>Board/University</th>
+              <th>Year</th>
+              <th>Percentage</th>
+            </tr>
+            <tr>
+              <td>B.Tech</td>
+              <td>
+                Institute of Technology Guru Ghasidas University, Bilaspur
+                Chhatishgadh
+              </td>
+              <td>AICTE</td>
+              <td>2023</td>
+              <td>8.5 CGPA</td>
+            </tr>
+            <tr>
+              <td>XII</td>
+              <td>Jawahar Navodaya Vidyalaya Bikram, Patna</td>
+              <td>CBSE</td>
+              <td>2018</td>
+              <td>75 %</td>
+            </tr>
+            <tr>
+              <td>X</td>
+              <td>Jawahar Navodaya Vidyalaya Bikram, Patna</td>
+              <td>CBSE</td>
+              <td>2016</td>
+              <td>9.6 CGPA</td>
+            </tr>
+          </table>
+
+          <div className="heading">
+            <p>ACHIEVEMENTS AND CERTIFICATION</p>
+          </div>
+
+          <ul>
+            <li>LinkedIn Certified:- </li>
+          </ul>
+        </div>
+
+        {/* Main Body End  */}
+
         <div className="footer"></div>
       </div>
     </div>
