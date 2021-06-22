@@ -40,7 +40,7 @@ function DropDownInput(props) {
           open={open}
           onClose={handleClose}
           onOpen={handleOpen}
-          value={label}
+          value={props.value || label}
           onChange={handleChange}
         >
           {props.options.map((option, i) => {

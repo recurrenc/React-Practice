@@ -55,11 +55,13 @@ export default function StudentDetails(props) {
           Name="Course"
           id="course"
           onChange={handleInput}
+          value={props.studentState.course}
           options={MainList.course.map((e) => e.name)}
         />
         <DropDownInput
           Name="Department"
           id="department"
+          value={props.studentState.department}
           onChange={handleInput}
           renderValue={props.studentState.department}
           options={
@@ -73,6 +75,7 @@ export default function StudentDetails(props) {
         <DropDownInput
           Name="Semester"
           id="semester"
+          value={props.studentState.semester}
           onChange={handleInput}
           renderValue={props.studentState.semester}
           options={["I", "II", "III", "IV", "V", "VI", "VII", "VIII"]}
