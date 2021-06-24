@@ -86,7 +86,6 @@ function Feedback(props) {
   // ]);
 
   const handleChange = (event, newValue) => {
-    console.log(event.target);
     setValue(newValue);
   };
 
